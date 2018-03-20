@@ -1,0 +1,26 @@
+{
+  "name": "Node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caesar.js",
+  "dependencies": {
+    "gm": "^1.23.1",
+    "lodash": "^4.17.5",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ponchieponcho/node-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ponchieponcho/node-exercises/issues"
+  },
+  "homepage": "https://github.com/ponchieponcho/node-exercises#readme"
+}

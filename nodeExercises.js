@@ -89,35 +89,35 @@
 //     });
 //   });
 
-// // Part 4 - Save a web page
-// var https = require('https');
-// const readline = require('readline');
-// const fs = require('fs');
+// Part 4 - Save a web page
+var https = require('https');
+const readline = require('readline');
+const fs = require('fs');
 
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-// var content = "";
+var content = "";
 
-// rl.question('URL: ', (url) => {
-//     rl.question('Save to file: ', (output) => {
-//         https.get(url, function (res) {
-//             res.setEncoding('utf8');
-//             var rawData = '';
-//             res.on('data', function (chunk) {
-//                 rawData += chunk;
-//             });
-//             res.on('end', () => {
-//                 fs.writeFile(output, rawData, (err) => {
-//                     if (err) throw err;
-//                 });
-//             });
-//         })
-//         rl.close();
-//     })
-// })
+rl.question('URL: ', (url) => {
+    rl.question('Save to file: ', (output) => {
+        https.get(url, function (res) {
+            res.setEncoding('utf8');
+            var rawData = '';
+            res.on('data', function (chunk) {
+                rawData += chunk;
+            });
+            res.on('end', () => {
+                fs.writeFile(output, rawData, (err) => {
+                    if (err) throw err;
+                });
+            });
+        })
+        rl.close();
+    })
+})
 
 // Part 5 - Resize an image
 
